@@ -1,23 +1,17 @@
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
-    padding-bottom: 18px;
-}
-
-.left-header {
-    margin-left: -20px;
+    width: 61em;
 }
 
 .right-header {
     display:flex ;
     align-items: center;
-    margin-right: -30px;
 }
 
 .right-header-p {
     font-size: 15px;
-    margin-right: 35px;
+    padding-left: 28px;
     color:hsl(0, 2%, 38%);
     cursor: pointer;
 }

@@ -7,19 +7,12 @@ p {
   }
 body {
     width: 100%;
-    margin: 0;
-    padding-top: 110px;
-    padding-right: 24px;
-    margin-left: 96px;
   }
 
 .container {
-   display: block;
-   width: 100%; 
-   padding-top: 70px;
-   padding-left: 150px;
-   padding-right: 110px;
-   padding-bottom: 60px;
+   display: grid;
+   justify-content: center;
+   width: 62em;
    background-color:  hsl(36, 100%, 99%);
 }
 
@@ -27,41 +20,45 @@ body {
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
-    height: 500px;
+    width: 62em;
+    height: 29em;
+    gap: 0.4em;
 }
 
 .image-web-3-desktop {
-    width: 650px;  
-    height: 260px;
+    width: 40em;  
+    height: 16em;
 }
 
 .left-group {
     display: flex;
-    gap :140px;
-    width: 650px;
-    margin-right: 40px;
+    width: 40em;
+    gap: 22%;
+    justify-content: center;
+    padding-top: 20px;
  }
 
 .the-bright-future {
     font-family:Arial, Helvetica, sans-serif;  
-    font-size: 20px;
-    width: 200px; 
-    height: 200px;
+    font-size: 18px;
+    font-weight: 800;
+    width: 10em;
+    
 }
-
+ 
 .wrapper-txt-btn{
-    font-size: 14px;
-    width: 280px;
-    color:  hsl(0, 1%, 80%) ;
+    font-size: 15px;
+    width: 21em;
+    color:  hsl(0, 0%, 55%) ;
     line-height: 20px;
-    margin-top: 30px;
+    
 }
 
 .btn-read-more {
     background-color:  hsl(5, 85%, 63%);
     color: hsl(36, 100%, 99%);
     padding: 11px;
-    padding-left: 30px;
+    padding-left: 28px;
     padding-right: 30px;
     margin-top: 20px;
     border: 2px solid hsl(5, 85%, 63%);
@@ -77,14 +74,14 @@ body {
 }
 
  .right-group {
-    width: 265px;
-    height: 350px;
+    width: 20em;
+    margin-left: 4px;
     background-color:   hsl(240, 100%, 5%) ;
     padding-top: 34px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 36px;
-    margin-left: -48px;
+    padding-bottom: 24px;
+   
 }
 
 .right-group, .p {
@@ -131,38 +128,33 @@ hr {
 /* ----------------section-02 ----------------*/
 .section-02 {
     display: flex;
-    width: 980px;
+    width: 61em;
+    gap: 2.6em;
 }
 .boxes {
-    display: grid;
-    grid-template-columns: 50px 1fr ;
-}
-
-#box-02, #box-03 {
-    margin-left: 80px;
+    display: flex;
 }
 
 img {
     display: block;
-    width: 90px;
+    width: 7em;
+    height: 8.4em;
 }
 
 .boxes-info {
-    width: 150px;
-    height: 89px;
-    margin-left: 55px;
-    margin-top: -20px;
+   width: 11em;
 }
 
 h2 {
-    color: hsl(0, 1%, 80%) ;
+    padding-left: 8px;
+    color: hsl(0, 0%, 70%) ;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .box-title {
-    width: 199px;
     font-weight: 800;
     font-size: 15px;
+    padding-left: 8px;
 }
 
 .box-title:hover {
@@ -171,101 +163,112 @@ h2 {
 }
 
 .box-text {
-    width: 199px;
     font-size: 12px;
-    color: hsl(0, 1%, 80%) ;
+    color: hsl(0, 1%, 55%) ;
     line-height: 20px;
     padding-top: 9px;
+    padding-left: 8px;
 }
 
 .attribution {
-    margin-top: 50px;
+    margin-top: 12em;
     color: hsl(236, 13%, 42%);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 50em) {
+ 
     .container {
+        display: block;
+        width: 30em;
+        justify-content: left;
+        visibility: visible;
+	    opacity: 1;
+        transition: all 1s ease-in-out;
+        order: unset;
+        scroll-behavior: smooth;
+    }
+    
+    .header {
         display: grid;
-        width: 200px;
-     }
-     .section-01 {
-       display: block;
-       height: fit-content;
+        width: 40em;
     }
-    svg {
-        margin-left: -100px;
-     }
-    .right-header-p {
-        display: none;
+
+    svg  {
+       margin-top: 2em;
     }
-    .hamburger-icon  {
-        display: block;
-        position:absolute;
+
+    .hamburger-icon {
+        display: flex;
         float: right;
-        top: 230px;
-        margin-left: 210px;
-     }
-     .hamburger-icon:hover {
-        cursor: pointer;
-     } 
-    .image-web-3-desktop{
+        margin-left: 23em;
+        margin-top: 2.7em;
+
+    }
+    .right-header, .right-header-p ,  .image-web-3-desktop {
         display: none;
     }
-    .image-web-3-mobile {
-        display: block;
-        width: 350px;  
-        height: 300px;
-        margin-left: -100px;
-    }
-    .the-bright-future {
-        font-size: 22px;
-        font-weight: 800;
-        width: 350px;
-        font-family:Arial, Helvetica, sans-serif;  
-    }
-    .left-group {
-        display: block;
-        width: 300px;
-        margin-left: -100px;
+    
+     .section-01 {
+         display: grid;
+         width: 30em;
      }
 
-    .wrapper-txt-btn {
-        width: 350px;
+     .image-web-3-mobile {
+        display: block;
+        width: 30em;
+        height: 30em;
+     }
+     
+     .left-group {
+        display: block;
+        margin-top: -2em;
+     }
+     
+     .the-bright-future {
+        font-size: 22px;
+        font-weight: 800;
+        width: 16em; 
+    }
+      
+     .wrapper-txt-btn{
+         display: block;
+     }
+     
+      .right-group {
+       display: block;
+       width: 26em;
+       height: 30em;
+       margin-bottom: 3em;
+       margin-top: 3em;
+       margin-left: 0.1em;
+     }
+     
+     .section-02 {
+        width: 30em;
+        display: grid;
+        grid-template-columns: 1fr ;
+        margin-top: 58em; 
+     }
+
+     .boxes-info {
+        width: 13em;
+        padding-left: 20px;
+     }
+
+     .box-text {
+        font-size: 16px;
+        width: 15em;
+    }
+
+    h2 {
+        margin-top: -4px;
+        padding: 0;
+        padding-left: 10px;
+    }
+
+    .box-title {
+        padding: 0;
+        padding-left: 10px;
         font-size: 17px;
     }
-    .btn-read-more {
-        background-color:  hsl(5, 85%, 63%);
-        color: hsl(36, 100%, 99%);
-        padding: 11px;
-        padding-left: 30px;
-        padding-right: 30px;
-        margin-top: 30px;
-        margin-bottom: 60px;
-        border: 2px solid hsl(5, 85%, 63%);
-        font-size: 11px;
-        letter-spacing: 0.3rem;
-        font-weight: 600;
-        cursor: pointer;
-    }
-   .right-group {
-        margin-left: -100px;
-        width: 300px;
-        font-size: 15px;
-   }
-    .section-02 {
-        display: block;
-        height: fit-content;
-    }
-    .boxes {
-        margin-top: 45px;
-        margin-left: -100px;
-     }
-     #box-02 , #box-03 {
-        margin-left: -100px;
-    }
-    .attribution {
-        width:300px;
-        font-size: 13px;
-        margin-left: -100px;
-    }
-}
+  };
