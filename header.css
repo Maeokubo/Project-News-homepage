@@ -1,27 +1,29 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    width: 61em;
-}
+   display: flex;
+   justify-content: space-between;
+    padding-bottom: 1.7em;}
 
 .right-header {
     display:flex ;
     align-items: center;
 }
 
-.right-header-p {
+.right-header-ul  li{
+    display: inline-block;
+    margin: 0 5px;
     font-size: 15px;
     padding-left: 28px;
     color:hsl(0, 2%, 38%);
-    cursor: pointer;
+    list-style: none;
+    
 }
 
-.right-header-p:hover {
+.right-header-ul li:hover {
     cursor: pointer;
     color:hsl(5, 85%, 63%);
 }
 
-
-
-
-
+.logoW {
+    width: 4em;
+    height: 3.5em;
+}

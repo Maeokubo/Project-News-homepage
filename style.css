@@ -7,6 +7,7 @@ p {
   }
 body {
     width: 100%;
+    overflow-x: hidden;
   }
 
 .container {
@@ -121,7 +122,7 @@ hr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.hamburger-icon, .image-web-3-mobile, .nav {
+.hamburger-icon, .image-web-3-mobile, .nav, .close-btn, .menu-btn, .mobile-ul {
     display: none;
 }
 
@@ -175,7 +176,7 @@ h2 {
     color: hsl(236, 13%, 42%);
 }
 
-@media (max-width: 50em) {
+@media (min-width: 0) and (max-width:40em){
  
     .container {
         display: block;
@@ -183,28 +184,85 @@ h2 {
         justify-content: left;
         visibility: visible;
 	    opacity: 1;
-        transition: all 1s ease-in-out;
-        order: unset;
-        scroll-behavior: smooth;
+        transition: all 0.05s ease-in-out;
     }
     
     .header {
-        display: grid;
-        width: 40em;
+        padding: 0;   
     }
 
-    svg  {
-       margin-top: 2em;
-    }
-
-    .hamburger-icon {
+    .header nav ul {
+        position: relative;
+        list-style: none;
         display: flex;
-        float: right;
-        margin-left: 23em;
-        margin-top: 2.7em;
-
+        padding: 0;
+        margin: 0;
+        padding: min(20vh) 1em;
     }
-    .right-header, .right-header-p ,  .image-web-3-desktop {
+
+    .header nav ul li {
+        margin-inline-end: 0.75em;
+        font-size: 15px;
+        padding: 0.5em;
+    }
+
+    #close-button {
+        position: fixed;
+        padding: 2em;
+        right: -4em;
+        padding:  min(3vh) 9em;
+    }
+
+    #menu-button  {
+       margin-left: 17em;
+       margin-top: 1em;
+    }
+
+    .mobile-ul {
+        position: fixed;
+        flex-direction: column;   
+    }
+   
+    button {
+        background: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .header nav #menu-close {
+        position: absolute;
+        background: transparent;
+        border: none;
+        z-index: 99999;
+        cursor: pointer;
+    }
+
+    .menu-btn, .close-btn {
+        display: block;
+        justify-content: center;
+    }
+
+    .menu-btn img {
+        width: 3.2em;
+        height: 2em;    
+    }
+    
+    .close-btn img { 
+        width: 2.2em;
+        height: 2em;
+        justify-content: none;
+    }
+
+    .header nav {
+        position: fixed;
+        inset: 0 51% 0 -2.7% ;
+        background: hsla(0, 25%, 70%, 0.2);  /*white*/
+        transform: translateX(51%);
+        /*opacity: 0;*/
+    }
+
+    .right-header, .right-header-ul,  .image-web-3-desktop {
         display: none;
     }
     
@@ -215,7 +273,7 @@ h2 {
 
      .image-web-3-mobile {
         display: block;
-        width: 30em;
+        width: 26em;
         height: 30em;
      }
      
@@ -234,7 +292,7 @@ h2 {
          display: block;
      }
      
-      .right-group {
+    .right-group {
        display: block;
        width: 26em;
        height: 30em;
